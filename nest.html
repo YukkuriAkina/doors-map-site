@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f1 {
+            padding: 1em;
+            width: 20em;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            background-color: rgb(255, 157, 0);
+            border-radius: 2em;
+            transition: .1s;
+            position: fixed;
+            bottom: 20vh;
+            right: 70vw;
+        }
+
+        .f3 {
+            padding: 1em;
+            width: 20em;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            background-color: rgb(255, 242, 0);
+            border-radius: 2em;
+            transition: .1s;
+            position: fixed;
+            bottom: 20vh;
+            right: 40vw;
+        }
+
+        .f1:hover {
+            background-color: rgb(226, 145, 16);
+            border: 0.2em solid rgb(0, 187, 255);
+        }
+
+        .f3:hover {
+            background-color: rgb(220, 211, 37);
+            border: 0.2em solid rgb(0, 187, 255);
+        }
+
+        .f1:active {
+            background-color: rgb(255, 179, 56);
+            border: 0.2em solid rgb(0, 187, 255);
+        }
+
+        .f3:active {
+            background-color: rgb(255, 247, 100);
+            border: 0.2em solid rgb(0, 187, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <img id="1fimg" src="nest1.png" width="800" style="border: 0.01em solid; border-radius: 1em;">
+    <img id="3fimg" src="nest2.png" width="800" style=" border: 0.01em solid; border-radius: 1em; display: none;">
+    <button class="f1" id="1f">1F</button>
+    <button class="f3" id="3f">3F</button>
+    <script>
+        document.getElementById('1f').addEventListener('click', () => {
+            document.getElementById('1fimg').style.display = 'block'
+            document.getElementById('3fimg').style.display = 'none'
+        })
+        document.getElementById('3f').addEventListener('click', () => {
+            document.getElementById('1fimg').style.display = 'none'
+            document.getElementById('3fimg').style.display = 'block'
+        })
+    </script>
+</body>
+
+</html>
